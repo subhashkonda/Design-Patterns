@@ -1,0 +1,25 @@
+Definition:
+	Attaches additional responsibilities to an object dynamically
+
+Decorator has a component and is a component - Inheritance and Composition
+
+Advantages:
+	Adds behavior dynamically
+	Extends the functionality without affecting the other objects
+	Adheres to Open-Close Principle - Open for extension and closed for Modification
+	
+Scenarios:
+	TV with various setup box packages
+	Pizza with various toppings
+	Coffee with various Condiments - with milk, with soya milk, with no milk, mocha.
+	
+	Real World - Production Scenario - we can think of a scenario where I want to deprecate one object so to do that I can create a wrapper and then return from that wrapper rather than changing the deprecating class implementation; so in some places I can use deprecated in some places I can use with the wrapper.
+
+Info:
+We can't have those many diff classes for each combination which will leads to Class Explosion but satisfies the SRP - Single Responsibility Principle.
+So we can have all functions in the interface but
+	1. We shouldn't change the code when we have new type which violates Interface Segregation Principle.
+In below
+	2. Tea class doesn't need to have chocolate at all. So interface segregation says have smaller more interfaces rather than single big interface.
+	3. Cost will have lot of if conditions - Conditional Greedy: having one condition might leads to more conditions
+
